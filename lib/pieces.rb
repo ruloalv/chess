@@ -32,3 +32,12 @@ class King < Piece
 			   .keep_if {|m| valid_position(m)}
 	end
 end
+
+class Rook < Piece
+	@@MOVES = [[0,1],[0,-1],[1,0],[-1,0]]
+
+	def initialize(color, position)
+		color == 'Black' ? symbol = " \u265C " : symbol = " \u2656"
+		super('Rook', color, position, symbol)
+	end
+end
