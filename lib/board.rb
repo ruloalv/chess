@@ -7,4 +7,6 @@ class Board
 		@blacks = params[:blacks]
 		@trun = params[:turn]
 	end
+
+	
 end
