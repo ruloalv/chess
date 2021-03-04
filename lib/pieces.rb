@@ -15,4 +15,8 @@ class King < Piece
 		@@MOVES.map {|m| [@position[0] + m[0], @position[1] + m[1]}
 			   .keep_if {|m| valid_position(m)}
 	end
+
+	def valid_position(pos)
+		valid = super.valid_position(pos) && # !in_check (falta crear ese method)
+	end
 end
