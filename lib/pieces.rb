@@ -23,7 +23,8 @@ class King < Piece
 	@@MOVES = [[1,0],[1,1],[0,1],[-1,1],[-1,0],[-1,-1],[0,-1],[1,-1]]
 
 	def initialize(color, position)
-		super("King", color, position, " \u265A ")
+		color == 'Black' ? symbol = " \u265A " : symbol = " \u2654"
+		super("King", color, position, symbol)
 	end
 
 	def posible_moves
