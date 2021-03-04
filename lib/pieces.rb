@@ -6,6 +6,12 @@ class Piece
 		@color = color
 		@position = position
 	end
+
+	def move(pos)
+		if self.posible_moves.include?(pos) && self.valid_position(pos)
+			@position = pos
+		end
+	end
 end
 
 class King < Piece
