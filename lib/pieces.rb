@@ -1,10 +1,11 @@
 class Piece
-	attr_reader :name, :color, :position
+	attr_reader :name, :color, :position, :symbol
 
-	def initialize(name, color, position)
+	def initialize(name, color, position, symbol)
 		@name = name
 		@color = color
 		@position = position
+		@symbol = symbol
 	end
 
 	def move(pos)
