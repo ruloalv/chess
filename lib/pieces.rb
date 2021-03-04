@@ -13,6 +13,10 @@ class Piece
 			@position = pos
 		end
 	end
+
+	def valid_position(pos)
+		self.posible_moves.include?(pos)
+	end
 end
 
 class King < Piece
@@ -25,9 +29,5 @@ class King < Piece
 	def posible_moves
 		@@MOVES.map {|m| [@position[0] + m[0], @position[1] + m[1]}
 			   .keep_if {|m| valid_position(m)}
-	end
-
-	def valid_position(pos)
-		valid = super.valid_position(pos) && # !in_check (falta crear ese method)
 	end
 end
