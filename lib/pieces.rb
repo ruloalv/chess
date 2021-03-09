@@ -37,7 +37,32 @@ class Rook < Piece
 	@@MOVES = [[0,1],[0,-1],[1,0],[-1,0]]
 
 	def initialize(color, position)
-		color == 'Black' ? symbol = " \u265C " : symbol = " \u2656"
+		color == 'Black' ? symbol = " \u265C " : symbol = " \u2656 "
 		super('Rook', color, position, symbol)
+	end
+end
+
+class Bishop < Piece
+	@@MOVES = [[-1,-1],[-1,1],[1,1],[1,-1]]
+
+	def initialize(color, position)
+		color == 'Black' ? symbol = " \u265D " : symbol = " \u2657 "
+		super('Bishop', color, position, symbol)
+	end
+end
+
+class Knight < Piece
+	@@MOVES = [[-1,2],[1,2],[1,-2],[-1,-2],[-2,1],[2,1],[2,-1],[-2,-1]]
+
+	def initialize(color, position)
+		color == 'Black' ? symbol = " \u265E " : symbol = " \u2658 "
+		super('Knight', color, position, symbol)
+	end
+end
+
+class Pawn < Piece
+	def initialize(color, position)
+		color == 'Black' ? symbol = " \u265F " : symbol = " \u2659 "
+		super('Pawn', color, position, symbol)
 	end
 end
