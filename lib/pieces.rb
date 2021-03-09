@@ -23,7 +23,7 @@ class King < Piece
 	@@MOVES = [[1,0],[1,1],[0,1],[-1,1],[-1,0],[-1,-1],[0,-1],[1,-1]]
 
 	def initialize(color, position)
-		color == 'Black' ? symbol = " \u265A " : symbol = " \u2654"
+		color == 'Black' ? symbol = " \u265A " : symbol = " \u2654 "
 		super("King", color, position, symbol)
 	end
 
