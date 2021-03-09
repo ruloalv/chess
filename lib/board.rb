@@ -8,5 +8,7 @@ class Board
 		@trun = params[:turn]
 	end
 
-	
+	def cell_free?(cell)
+		@grid[cell[0],cell[1]].nil?
+	end
 end
